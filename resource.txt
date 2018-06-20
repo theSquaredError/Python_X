@@ -1,0 +1,1 @@
+https://blog.iconfinder.com/detecting-duplicate-images-using-python-cb240b05a3b6  --- for finding duplicate images
