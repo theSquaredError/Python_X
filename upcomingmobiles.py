@@ -24,12 +24,11 @@ for i in range(len(phone_list)):
 	lst = []
 	lst.append(phone_list[i].select('.gadName')[0].getText())
 	specs = phone_list[i].select('.specs')
-	lst.append(specs[0].select('span')[1].getText())
-	lst.append(specs[1].select('span')[1].getText())
-	lst.append(specs[2].select('span')[1].getText())
-	lst.append(specs[3].select('span')[1].getText())
+	j=0
+	for j in range(len(specs)):
+		lst.append(specs[j].select('span')[1].getText())
 	mobile.append(lst)
 
-df = pd.DataFrame(mobile,columns=['title','performance','display','storage','camera'])
+df = pd.DataFrame(mobile,columns=['Title','performance','display','storage','camera'])
 
 df.to_csv('phones.csv',encoding='utf-8',index=False)
